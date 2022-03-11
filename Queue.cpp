@@ -18,11 +18,25 @@ void Queue::push(int number) {
 
 int Queue::pop() {
 	if (isEmpty()) return -1;
-	QueueElement* tmp = this->head;
 
-	int value = this->head->getData();
-	this->head = this->head->getPrev();
-	delete tmp;
+	QueueElement* last = this->head;
+	QueueElement* prev = last;
+
+	while (last)
+	{
+		if (last->getPrev()) {
+			prev = last;
+			last = last->getPrev();
+		}
+		else {
+			break;
+		}
+	}
+
+	int value = last->getData();
+	prev->setPrev(nullptr);
+
+	delete last;
 
 	return value;
 }

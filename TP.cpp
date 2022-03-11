@@ -36,7 +36,7 @@ void popLoop(abstractQueue queue) {
 	}
 	else 
 	{
-		cout << queue->pop() << "is poped" << endl;
+		cout << queue->pop() << " is poped" << endl;
 	}
 	cout << endl << "Press any key to exit" << endl;
 	_getch();
