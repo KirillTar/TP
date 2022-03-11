@@ -1,6 +1,6 @@
 #include "Queue.h"
 
-class QueueSecond : protected Queue
+class QueueSecond : private Queue
 {
 public:
 	QueueSecond();
