@@ -33,9 +33,7 @@ void Queue::print() {
 	while (currnet)
 	{
 		std::cout << currnet->getData();
-
 		currnet = currnet->getPrev();
-
 		if (currnet) std::cout << " -> ";
 	}
 
@@ -45,9 +43,9 @@ void Queue::print() {
 
 Queue* Queue::copy()
 {
-	Queue *newStack = new Queue;
-	newStack->head = new QueueElement(*this->head);
-	QueueElement *currnet = newStack->head;
+	Queue *QueueNew = new Queue;
+	QueueNew->head = new QueueElement(*this->head);
+	QueueElement *currnet = QueueNew->head;
 
 	while (currnet)
 	{
@@ -63,8 +61,7 @@ Queue* Queue::copy()
 	}
 
 	std::cout << "Queue copyed" << std::endl;
-
-	return newStack;
+	return QueueNew;
 }
 
 bool Queue::isEmpty() {

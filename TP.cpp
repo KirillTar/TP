@@ -9,16 +9,16 @@
 
 using namespace std;
 
-template <typename StackLike>
-StackLike* QueueCurrent;
+template <typename abstractQueue>
+abstractQueue* QueueCurrent;
 
 QueueFirst* Queue1;
 QueueSecond* Queue2;
 QueueThird* Queue3;
 Queue* buffer;
 
-template <typename StackLike>
-void pushLoop(StackLike queue) {
+template <typename abstractQueue>
+void pushLoop(abstractQueue queue) {
 	int x;
 
 		cout << "Enter nuber: ";
@@ -28,8 +28,8 @@ void pushLoop(StackLike queue) {
 		_getch();
 }
 
-template <typename StackLike>
-void popLoop(StackLike queue) {
+template <typename abstractQueue>
+void popLoop(abstractQueue queue) {
 
 	if (queue->isEmpty()) {
 		cout << "Queue is empty"  << endl;
@@ -43,8 +43,8 @@ void popLoop(StackLike queue) {
 }
 
 
-template <typename StackLike>
-void printLoop(StackLike queue) {
+template <typename abstractQueue>
+void printLoop(abstractQueue queue) {
 	if (queue->isEmpty()) {
 		cout << "Queue is empty" << endl;
 	}
@@ -56,13 +56,13 @@ void printLoop(StackLike queue) {
 	_getch();
 }
 
-template <typename StackLike>
-void copyLoop(StackLike* queue) {
+template <typename abstractQueue>
+void copyLoop(abstractQueue* queue) {
 	buffer = queue->copy();
 }
 
-template <typename StackLike>
-void uniteLoop(StackLike* stack) {
+template <typename abstractQueue>
+void uniteLoop(abstractQueue* stack) {
 	QueueElement* Actual = buffer->getHead();
 
 	while (Actual->getPrev()) {
@@ -77,8 +77,8 @@ void uniteLoop(StackLike* stack) {
 	_getch();
 }
 
-template <typename StackLike>
-void calculateLoop(StackLike queue) {
+template <typename abstractQueue>
+void calculateLoop(abstractQueue queue) {
 	if (queue->isEmpty()) {
 		cout << "Queue is empty" << endl;
 	}
@@ -91,8 +91,8 @@ void calculateLoop(StackLike queue) {
 	_getch();
 }
 
-template <typename StackLike>
-void commandList(int command, StackLike queue) {
+template <typename abstractQueue>
+void commandList(int command, abstractQueue queue) {
 	switch (command)
 	{
 	case 1:

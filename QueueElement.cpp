@@ -5,9 +5,9 @@ QueueElement::QueueElement(int data, QueueElement *prev) {
 	this->prev = prev;
 }
 
-QueueElement::QueueElement(const QueueElement &stackElement) {
-	this->data = stackElement.data;
-	this->prev = stackElement.prev;
+QueueElement::QueueElement(const QueueElement &element) {
+	this->data = element.data;
+	this->prev = element.prev;
 }
 
 QueueElement::~QueueElement() {

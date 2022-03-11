@@ -5,14 +5,14 @@ class Queue
 {
 public:
 	Queue();
-	virtual void push(int element);
-	virtual int pop();
-	virtual void print();
-	virtual bool isEmpty();
-	virtual QueueElement* getHead();
-	virtual void setHead(QueueElement* element);
-	virtual Queue* copy();
-	int getResultValue();
+	void push(int element);
+	int pop();
+	void print();
+	bool isEmpty();
+	QueueElement* getHead();
+	void setHead(QueueElement* element);
+	Queue* copy();
+	int numberCheck();
 
 private:
 	QueueElement *head;
