@@ -72,8 +72,9 @@ void uniteLoop(abstractQueue* stack) {
 	Actual->setPrev(stack->getHead());
 	stack->setHead(buffer->getHead());
 
-	buffer = nullptr;
+	cout << "United" << endl;
 	cout << endl << "Press any key to exit" << endl;
+	buffer = nullptr;
 	_getch();
 }
 
@@ -156,7 +157,7 @@ int main()
 
 		if (QueueActive < 1 || QueueActive > 3)
 		{
-			cout << " Wrong queue"<< endl;
+			cout << " Wrong queue"<< endl << endl;
 				continue;
 		}
 		cout << "Command number:";
